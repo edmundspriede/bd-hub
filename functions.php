@@ -1,4 +1,4 @@
-
+<?
 add_action('rest_api_init', 'register_custom_endpoint');
 
 function register_custom_endpoint() {
