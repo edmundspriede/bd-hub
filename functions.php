@@ -1,4 +1,7 @@
 <?
+
+//EP custom REST API endpoint to update listingcc post
+
 add_action('rest_api_init', 'register_custom_endpoint');
 
 function register_custom_endpoint() {
@@ -42,6 +45,8 @@ function update_listing_meta(WP_REST_Request $request) {
 	return new WP_REST_Response(['success' => true, "id" => $data['id'],  "serialized" => $listing_serialized, 'cats' => $terms], 200);
 	
 }
+
+//EP custom webhook to send emails from main form (hook for JFB)
 
 function initiate_emails_webook($form, $args) {
     
